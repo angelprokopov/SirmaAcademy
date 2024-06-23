@@ -1,0 +1,13 @@
+.cover {
+    background-image: url("");
+    background-size: cover;
+    width: 400px;
+    height: 300px;
+}
+
+.contain {
+    background-image: url("");
+    background-size: contain;
+    width: 400px;
+    height: 300px;
+}

@@ -1,0 +1,15 @@
+@keyframes moveRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(300px);
+    }
+}
+
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    animation: moveRight 2s infinite alternate;
+}

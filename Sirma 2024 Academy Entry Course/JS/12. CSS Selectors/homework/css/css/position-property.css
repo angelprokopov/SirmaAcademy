@@ -1,0 +1,15 @@
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+    padding: 10px;
+}
+.relative-box {
+    position: relative;
+    top: 50px;
+    left: 20px;
+    background-color: lightgreen;
+    padding: 10px;
+}

@@ -1,0 +1,8 @@
+.pseudo-element::before {
+    content: "Before - ";
+    color: gray;
+}
+.pseudo-element::after {
+    content: " - After";
+    color: gray;
+}

@@ -1,0 +1,12 @@
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgray;
+    padding: 20px;
+}
+.flex-item {
+    background-color: lightcoral;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}

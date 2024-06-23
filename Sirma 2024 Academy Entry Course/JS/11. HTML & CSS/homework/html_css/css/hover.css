@@ -1,0 +1,8 @@
+.hover-link {
+    color: blue;
+}
+
+.hover-link:hover {
+    color: red;
+    text-decoration: underline;
+}
