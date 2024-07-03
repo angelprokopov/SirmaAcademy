@@ -1,65 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Advanced Media Queries</title>
     <style>
         body {
-
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         header, footer {
-
+            background-color: #333333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
         }
 
         nav {
-
+            background-color: #000000;
+            text-align: center;
+            padding: 10px;
         }
 
         nav a {
-
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
         }
 
         .container {
-
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .section {
-
-
+            background-color: #dddddd;
+            padding: 20px;
+            margin: 8px 5px 10px;
+            flex: 1;
+            justify-content: center;
+            border: 1px solid #cccccc;
+            text-align: center;
         }
 
         @media (min-width: 600px) and (max-width: 899px) {
             .container {
+                flex-direction: column;
             }
 
             nav {
-
+                display: none;
             }
         }
 
         @media (min-width: 900px) and (max-width: 1399px) {
             nav {
-
+                flex-direction: column;
+                position: fixed;
+                width: 200px;
+                height: 100%;
             }
 
             .container {
+                margin-left: 200px;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
 
+            .section {
+                flex: 1 1 30%;
+                margin: 1.5%;
             }
         }
 
         @media (min-width: 1400px) {
             nav {
-
+                display: flex;
+                justify-content: center;
             }
 
             .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
 
+            .section {
+                flex: 1 1 10%;
+                margin: 1.5%;
             }
         }
     </style>
 </head>
 <body>
+<header>
+    <h1>Advanced Responsive Design</h1>
+</header>
 <nav>
     <a href="#section1">Section 1</a>
     <a href="#section2">Section 2</a>
