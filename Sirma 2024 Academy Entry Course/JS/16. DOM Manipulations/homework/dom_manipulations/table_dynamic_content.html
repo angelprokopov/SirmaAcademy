@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Table</title>
+</head>
+<body>
+<form onsubmit="createDynamicTable(); return false;">
+    Number of rows: <input type="number" id="rows" name="rows"><br>
+    Number of columns: <input type="number" id="cols" name="cols"><br>
+    <input type="submit" value="Create Table">
+</form>
+<div id="tableContainer"></div>
+
+<script>
+    let rows = document.querySelector('#rows').value;
+    let cols = document.querySelector('#cols').value;
+    let table = '<table border="1">';
+    for (let i = 0; i < rows; i++) {
+        table += '<tr>';
+        for (let j = 0; j < cols; j++) {
+            table += '<td>Row-' + i + ' Col-' + j + '</td>';
+        }
+        table += '</tr>';
+    }
+    table += '</table>';
+    document.querySelector('#tableContainer').innerHTML = table;
+</script>
+</body>
+</html>

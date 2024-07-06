@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert Paragraph</title>
+</head>
+<body>
+<div id="div1">
+    <p id="para1">This is the first paragraph.</p>
+</div>
+<button onclick="insertParagraph()">Insert Paragraph</button>
+
+<script>
+    function insertParagraph() {
+        let para = document.createElement('p');
+        let node = document.createTextNode('This is a new paragraph.');
+        para.appendChild(node);
+
+        let div = document.querySelector('#div1');
+        let referenceNode = document.querySelector('#para1');
+        div.insertBefore(para, referenceNode.nextSibling);
+    }
+</script>
+</body>
+</html>

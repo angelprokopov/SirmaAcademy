@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Return first and last name from a form</title>
+</head>
+<body>
+<form id="form1" onsubmit="getFormvalue(); return false;">
+    First name: <input type="text" name="fname" value="David"><br>
+    Last name: <input type="text" name="lname" value="Beckham"><br>
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    function getFormvalue() {
+        let fname = document.forms['form1']['fname'].value
+        let lname = document.forms['form1']['lname'].value
+        alert(`First name: ${fname} \nLast name: ${lname}`)
+    }
+</script>
+</body>
+</html>

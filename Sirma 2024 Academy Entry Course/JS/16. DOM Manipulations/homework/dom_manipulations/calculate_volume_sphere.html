@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volume of a Sphere</title>
+</head>
+<body>
+<form id="MyForm">
+    <label for="radius">Radius:</label>
+    <input type="text" id="radius" name="radius">
+    <input type="button" onclick="calculateVolume()" value="Calculate">
+</form>
+<p id="result"></p>
+<script>
+    function calculateVolume() {
+        let radius = document.querySelector('#radius')
+        let volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
+
+        document.querySelector('#result').innerHTML = `Volume of the sphere: ${volume.toFixed(2)}`
+    }
+</script>
+</body>
+</html>
