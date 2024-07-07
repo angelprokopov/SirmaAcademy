@@ -27,43 +27,7 @@
 </div>
 
 <script>
-    const itemsList = document.querySelector('#items');
-    const inputField = document.querySelector('#input');
-    const button = document.querySelector('#button');
 
-    // Function to create a new list item
-    function createNewItem() {
-        const newItemText = inputField.value;
-        if (newItemText.trim() !== "") {
-            const newItem = document.createElement('li');
-            newItem.textContent = newItemText;
-            itemsList.appendChild(newItem);
-            inputField.value = "";
-        }
-    }
-
-    // Function to edit the text of a list item
-    function editItem(event) {
-        if (event.target.tagName === 'LI') {
-            const currentItem = event.target;
-            inputField.value = currentItem.textContent;
-            inputField.focus();
-
-            inputField.addEventListener('blur', function updateItem() {
-                if (inputField.value.trim() !== "") {
-                    currentItem.textContent = inputField.value;
-                    inputField.value = "";
-                }
-                inputField.removeEventListener('blur', updateItem);
-            });
-        }
-    }
-
-    // Add event listener to the button to create a new item
-    button.addEventListener('click', createNewItem);
-
-    // Add event listener to the list to edit items
-    itemsList.addEventListener('click', editItem);
 </script>
 </body>
 </html>

@@ -20,21 +20,7 @@
 </p>
 
 <script>
-    const link = document.querySelector('#highlight-link');
-    const paragraph = document.querySelector('#paragraph');
-    const boldWords = paragraph.querySelectorAll('b');
 
-    link.addEventListener('mouseover', () => {
-        boldWords.forEach(word => {
-            word.classList.add('highlight');
-        });
-    });
-
-    link.addEventListener('mouseout', () => {
-        boldWords.forEach(word => {
-            word.classList.remove('highlight');
-        });
-    });
 </script>
 </body>
 </html>
