@@ -24,7 +24,14 @@
 </form>
 
 <script>
-
+    function changeContent() {
+        const table = document.getElementById('myTable');
+        const row = prompt('Enter row number (0, 1, 2, ...):');
+        const col = prompt('Enter column number (0, 1, 2, ...):');
+        const text = prompt('Enter new content:');
+        const cell = table.rows[row].cells[col];
+        cell.innerHTML = text;
+    }
 </script>
 </body>
 </html>

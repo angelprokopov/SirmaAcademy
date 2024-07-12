@@ -12,7 +12,11 @@
 </form>
 <p id="result"></p>
 <script>
-
+    function calculateVolume() {
+        const radius = document.querySelector('#radius').value
+        const volume = (4/3) * Math.PI * Math.pow(radius, 3)
+        document.querySelector('#result').innerHTML = `Volume: ${volume.toFixed(2)}`
+    }
 </script>
 </body>
 </html>

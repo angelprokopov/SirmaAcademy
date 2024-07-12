@@ -12,7 +12,12 @@
 </form>
 
 <script>
-
+    function getFormvalue() {
+        const form = document.querySelector('#form1')
+        const firstName = form.elements['fname'].value
+        const lastName = form.elements['lname'].value
+        console.log(`First name: ${firstName}, Last name: ${lastName}`)
+    }
 </script>
 </body>
 </html>

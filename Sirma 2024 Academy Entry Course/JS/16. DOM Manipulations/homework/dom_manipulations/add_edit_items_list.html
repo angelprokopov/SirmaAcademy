@@ -27,7 +27,21 @@
 </div>
 
 <script>
-
+    function createNewItem() {
+        const ul = document.querySelector('#items');
+        const input = document.querySelector('#newItemText');
+        const text = input.value;
+        const li = document.createElement('li');
+        li.textContent = text;
+        li.onclick = function() {
+            const newText = prompt('Enter new text:', li.textContent);
+            if (newText !== null) {
+                li.textContent = newText;
+            }
+        };
+        ul.appendChild(li);
+        input.value = '';
+    }
 </script>
 </body>
 </html>

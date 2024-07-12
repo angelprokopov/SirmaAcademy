@@ -16,7 +16,19 @@
 </form>
 
 <script>
-
+    function createTable() {
+        const table = document.querySelector('#myTable');
+        const rows = prompt('Enter number of rows:');
+        const cols = prompt('Enter number of columns:');
+        table.innerHTML = '';
+        for (let i = 0; i < rows; i++) {
+            const row = table.insertRow();
+            for (let j = 0; j < cols; j++) {
+                const cell = row.insertCell();
+                cell.innerHTML = `Row-${i} Column-${j}`;
+            }
+        }
+    }
 </script>
 </body>
 </html>

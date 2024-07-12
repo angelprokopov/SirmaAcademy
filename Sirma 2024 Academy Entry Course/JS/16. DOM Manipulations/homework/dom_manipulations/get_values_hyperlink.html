@@ -11,7 +11,14 @@
 <button onclick="getAttributes()">Click here to get attributes value</button>
 
 <script>
-
+function getAttributes() {
+    const link = document.querySelector('#someId')
+    console.log(`href: ${link.href}`)
+    console.log(`hreflang: ${link.hreflang}`)
+    console.log(`rel: ${link.rel}`)
+    console.log(`target: ${link.target}`)
+    console.log(`type: ${link.type}`)
+}
 </script>
 </body>
 </html>

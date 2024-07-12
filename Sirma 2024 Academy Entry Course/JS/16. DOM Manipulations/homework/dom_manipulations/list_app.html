@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List App</title>
+    <style>
+        body {
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="list-app">
+    <p>Click on the item to change the text, or click on the button to create a new item.</p>
+    <ul id="items">
+        <li>Map, filter, reduce</li>
+        <li>The DOM</li>
+        <li>Callbacks</li>
+    </ul>
+    <input type="text" id="newItemText" value="">
+    <button type="button" onclick="createNewItem()">Create New</button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        function createNewItem() {
+            const ul = document.querySelector('#items');
+            const input = document.querySelector('#newItemText');
+            const text = input.value;
+            if (text.trim() !== '') {
+                const li = document.createElement('li');
+                li.textContent = text;
+                li.onclick = function() {
+                    const newText = prompt('Enter new text:', li.textContent);
+                    if (newText !== null) {
+                        li.textContent = newText;
+                    }
+                };
+                ul.appendChild(li);
+                input.value = '';
+            }
+        }
+        window.createNewItem = createNewItem;
+        
+        const listItems = document.querySelectorAll('#items li');
+        listItems.forEach(item => {
+            item.onclick = function() {
+                const newText = prompt('Enter new text:', item.textContent);
+                if (newText !== null) {
+                    item.textContent = newText;
+                }
+            };
+        });
+    });
+</script>
+</body>
+</html>

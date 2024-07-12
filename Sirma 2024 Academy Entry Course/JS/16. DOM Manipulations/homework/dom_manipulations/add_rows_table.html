@@ -19,7 +19,14 @@
 <input type="button" onclick="insertRow()" value="Insert row">
 
 <script>
-
+    function insertRow() {
+        let table = document.querySelector('#sampleTable')
+        let newRow = table.insertRow()
+        let cel1 = newRow.insertCell(0)
+        let cel2 = newRow.insertCell(1)
+        cel1.innerHTML = "New cell #1"
+        cel2.innerHTML = "New cell #2"
+    }
 </script>
 </body>
 </html>

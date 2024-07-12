@@ -22,7 +22,14 @@
 </form>
 
 <script>
-
+    function getOptions() {
+        const select = document.querySelector('#mySelect');
+        const options = select.options;
+        alert(`Number of options: ${options.length}`);
+        for (let i = 0; i < options.length; i++) {
+            console.log(`Option ${i}: ${options[i].text}`);
+        }
+    }
 </script>
 </body>
 </html>

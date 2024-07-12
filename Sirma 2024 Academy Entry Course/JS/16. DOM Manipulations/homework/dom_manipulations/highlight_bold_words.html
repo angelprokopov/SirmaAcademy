@@ -11,16 +11,19 @@
     </style>
 </head>
 <body>
-<a href="#" id="boldLink">Link</a>
+<a href="#" id="boldLink" onmouseover="highlightBoldWords()">Link</a>
 
 <p id="textToHighlight">
-    We have just started this section for the users (<b>beginner</b> to <b>intermediate</b>)
-    who want to work with various JavaScript problems and write scripts online to test their
-    JavaScript skill.
+    <b>We</b> have just started this section for the users (beginner to intermediate)
+    who <b>want</b> to work with <b>various</b> JavaScript <b>problems</b> and write scripts online to <b>test</b> their
+    JavaScript <b>skill</b>.
 </p>
 
 <script>
-
+    function highlightBoldWords() {
+        const boldWords = document.querySelectorAll('b')
+        boldWords.forEach(word=>word.classList.add('highlight'))
+    }
 </script>
 </body>
 </html>

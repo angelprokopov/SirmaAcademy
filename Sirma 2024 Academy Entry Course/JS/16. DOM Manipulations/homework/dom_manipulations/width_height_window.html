@@ -9,7 +9,13 @@
 <p id="dimensions">Resize the window to see the dimensions.</p>
 
 <script>
-
+    function updateWindowSize() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        document.querySelector('#dimensions').innerHTML = `Width: ${width}, Height: ${height}`;
+    }
+    window.onresize = updateWindowSize;
+    updateWindowSize()
 </script>
 </body>
 </html>
